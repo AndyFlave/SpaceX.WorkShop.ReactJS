@@ -40,7 +40,7 @@ const Header = props => (
 				<li className="item">
 					<NavLink
 						exact
-						to="calendar"
+						to="/calendar"
 						className="item-link"
 						activeClassName="active">Calendar</NavLink>
 				</li>
