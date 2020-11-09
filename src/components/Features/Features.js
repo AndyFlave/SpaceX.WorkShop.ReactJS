@@ -14,10 +14,11 @@ const rocketImages = {
 const Features = ({ name, height, diameter, mass, payload_weights: payloadWeight, description }) => {
 	return (
 		<>
+			<Main rocket={name} />
 			<section className="features">
 				<h2 className="features-title">
 					{name} <br />Overview
-		</h2>
+				</h2>
 				<div className="overview">
 
 					<table className="table">
