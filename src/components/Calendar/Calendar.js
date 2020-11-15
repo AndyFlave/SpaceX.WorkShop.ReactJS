@@ -4,6 +4,7 @@ import './calendar.css';
 import useLaunches from '../useLaunches/useLaunches';
 
 import Main from '../Main/Main';
+import Loader from '../Loader/Loader';
 
 const Calendar = () => {
 
@@ -14,6 +15,7 @@ const Calendar = () => {
 			<Main name="Calendar Spacex" />
 			<section className="calendar">
 				<div className="container">
+					{!data.length && <Loader />}
 					<ul className="calendar-list">
 
 						{

@@ -7,6 +7,7 @@ import Features from './components/Features/Features';
 import Footer from './components/Footer/Footer';
 import Calendar from './components/Calendar/Calendar';
 import Details from './components/Details/Details';
+import Loader from './components/Loader/Loader';
 
 import FetchData from './service/FetchData';
 
@@ -56,11 +57,11 @@ class App extends React.Component {
 
 				<Route exact
 					path='/'
-					render={() => this.state.company && <Home company={this.state.company} />}
+					render={() => this.state.company ? <Home company={this.state.company} /> : <Loader />}
 				/>
 				<Route path='/rocket'
-					render={() => this.state.rocketFeatures &&
-						<Features {...this.state.rocketFeatures} />} />
+					render={() => this.state.rocketFeatures ?
+						<Features {...this.state.rocketFeatures} /> : <Loader />} />
 
 				<Route path='/calendar' component={Calendar} />
 

@@ -3,6 +3,7 @@ import { useHistory } from 'react-router-dom';
 import useLaunches from '../useLaunches/useLaunches';
 import Youtube from 'react-youtube';
 import Main from '../Main/Main';
+import Loader from '../Loader/Loader';
 import './details.css';
 
 const Details = (props) => {
@@ -17,7 +18,7 @@ const Details = (props) => {
 
 	const history = useHistory();
 
-	if (!launch) return null;
+	if (!launch) return <Loader />;
 
 	return (
 		<>
