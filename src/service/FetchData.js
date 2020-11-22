@@ -15,8 +15,10 @@ export default class FetchData {
 	getRocket = async () =>
 		await this.getResource(this.startUrl + 'rockets');
 
-	getLaunches = async () =>
-		await this.getResource(this.startUrl + 'launches/past');
+	getLaunches = async () => {
+		const launches = await this.getResource(this.startUrl + 'launches/past');
+		return launches.sort((a, b) => b.date_unix - a.date_unix);
+	};
 
 	getCompany = async () =>
 		await this.getResource(this.startUrl + 'company');
