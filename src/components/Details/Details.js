@@ -30,6 +30,11 @@ const Details = (props) => {
 							<img src={launch.links.patch.small} alt={launch.name} />
 						</div>
 						<div className="details-content">
+							<ul className="details-info">
+								<li><b>Date:</b> {new Date(launch.date_utc).toLocaleDateString()}</li>
+								<li><b>Flight number:</b> {launch.flight_number}</li>
+								<li><b>Status:</b> {launch.success ? 'Success' : 'Failure'}</li>
+							</ul>
 							<p className="details-description">{launch.details}</p>
 						</div>
 					</div>

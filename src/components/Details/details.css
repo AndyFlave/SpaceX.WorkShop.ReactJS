@@ -25,3 +25,20 @@
 	display: block;
 	margin: 25px auto;
 }
+
+.details-info {
+	margin: 0 0 20px;
+	padding: 0;
+	list-style: none;
+	font-size: 16px;
+	line-height: 1.8;
+}
+
+.details-info li {
+	margin-bottom: 5px;
+}
+
+.details-description {
+	font-size: 16px;
+	line-height: 1.5;
+}
