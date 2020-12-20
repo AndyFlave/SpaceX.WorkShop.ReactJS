@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 import Header from 'components/Header/Header';
 import Home from './components/Home/Home';
@@ -8,6 +8,7 @@ import Footer from './components/Footer/Footer';
 import Calendar from './components/Calendar/Calendar';
 import Details from './components/Details/Details';
 import Loader from './components/Loader/Loader';
+import NotFound from './components/NotFound/NotFound';
 
 import FetchData from './service/FetchData';
 
@@ -55,18 +56,21 @@ class App extends React.Component {
 			<BrowserRouter>
 				<Header rockets={this.state.rockets} changeRocket={this.changeRocket} />
 
-				<Route exact
-					path='/'
-					render={() => this.state.company ? <Home company={this.state.company} /> : <Loader />}
-				/>
-				<Route path='/rocket'
-					render={() => this.state.rocketFeatures ?
-						<Features {...this.state.rocketFeatures} /> : <Loader />} />
+				<Switch>
+					<Route exact
+						path='/'
+						render={() => this.state.company ? <Home company={this.state.company} /> : <Loader />}
+					/>
+					<Route path='/rocket'
+						render={() => this.state.rocketFeatures ?
+							<Features {...this.state.rocketFeatures} /> : <Loader />} />
 
-				<Route path='/calendar' component={Calendar} />
+					<Route path='/calendar' component={Calendar} />
 
-				<Route path='/details/:id' component={Details} />
+					<Route path='/details/:id' component={Details} />
 
+					<Route component={NotFound} />
+				</Switch>
 
 				{this.state.company && <Footer {...this.state.company} />}
 			</BrowserRouter>
