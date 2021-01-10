@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './calendar.css';
 import useLaunches from '../useLaunches/useLaunches';
@@ -9,6 +9,11 @@ import Loader from '../Loader/Loader';
 const Calendar = () => {
 
 	const { data } = useLaunches();
+	const [search, setSearch] = useState('');
+
+	const filtered = data.filter(item =>
+		item.name.toLowerCase().includes(search.toLowerCase())
+	);
 
 	return (
 		<>
@@ -16,10 +21,19 @@ const Calendar = () => {
 			<section className="calendar">
 				<div className="container">
 					{!data.length && <Loader />}
+					{!!data.length && (
+						<input
+							type="text"
+							className="calendar-search"
+							placeholder="Search by name..."
+							value={search}
+							onChange={e => setSearch(e.target.value)}
+						/>
+					)}
 					<ul className="calendar-list">
 
 						{
-							data.map(item => (
+							filtered.map(item => (
 								<li className="calendar-item" key={item.id}>
 									<article className="launches">
 										<div className="launches-image">
