@@ -9,6 +9,7 @@ import Calendar from './components/Calendar/Calendar';
 import Details from './components/Details/Details';
 import Loader from './components/Loader/Loader';
 import NotFound from './components/NotFound/NotFound';
+import Upcoming from './components/Upcoming/Upcoming';
 
 import FetchData from './service/FetchData';
 
@@ -66,6 +67,8 @@ class App extends React.Component {
 							<Features {...this.state.rocketFeatures} /> : <Loader />} />
 
 					<Route path='/calendar' component={Calendar} />
+
+					<Route path='/upcoming' component={Upcoming} />
 
 					<Route path='/details/:id' component={Details} />
 

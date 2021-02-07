@@ -44,6 +44,13 @@ const Header = props => (
 						className="item-link"
 						activeClassName="active">Calendar</NavLink>
 				</li>
+				<li className="item">
+					<NavLink
+						exact
+						to="/upcoming"
+						className="item-link"
+						activeClassName="active">Upcoming</NavLink>
+				</li>
 			</ul>
 		</nav>
 	</header>

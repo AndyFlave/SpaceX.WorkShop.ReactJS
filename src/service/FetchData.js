@@ -20,6 +20,11 @@ export default class FetchData {
 		return launches.sort((a, b) => b.date_unix - a.date_unix);
 	};
 
+	getUpcoming = async () => {
+		const launches = await this.getResource(this.startUrl + 'launches/upcoming');
+		return launches.sort((a, b) => a.date_unix - b.date_unix);
+	};
+
 	getCompany = async () =>
 		await this.getResource(this.startUrl + 'company');
 }

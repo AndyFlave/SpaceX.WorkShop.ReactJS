@@ -1,0 +1,36 @@
+.upcoming {
+	margin-top: 30px;
+	padding-bottom: 60px;
+}
+
+.upcoming-list {
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 0;
+	list-style: none;
+}
+
+.upcoming-item {
+	border: 1px solid #fff;
+	border-radius: 12px;
+	background-color: #111;
+	padding: 25px 30px;
+	margin-bottom: 20px;
+}
+
+.upcoming-title {
+	font-size: 22px;
+	margin-bottom: 10px;
+}
+
+.upcoming-date {
+	display: block;
+	color: #808080;
+	font-size: 14px;
+	margin-bottom: 15px;
+}
+
+.upcoming-text {
+	font-size: 15px;
+	line-height: 1.5;
+}
