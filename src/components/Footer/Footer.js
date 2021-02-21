@@ -14,6 +14,10 @@ const Footer = ({ links: { elon_twitter: elonMask, flickr, twitter, website }, s
 				<li className="item">
 					<a href={flickr} rel="noopener noreferrer" target='_blank' className="item-link">Flickr</a></li>
 				<li className="item">
+					<a href="https://www.instagram.com/spacex/" rel="noopener noreferrer" target='_blank' className="item-link">Instagram</a></li>
+				<li className="item">
+					<a href="https://www.linkedin.com/company/spacex" rel="noopener noreferrer" target='_blank' className="item-link">LinkedIn</a></li>
+				<li className="item">
 					<a href={website} rel="noopener noreferrer" target='_blank' className="item-link">Website</a></li>
 			</ul>
 		</nav>
