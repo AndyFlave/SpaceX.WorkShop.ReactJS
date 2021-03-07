@@ -22,7 +22,7 @@ const Header = props => (
 							onClick={() => {
 								props.changeRocket(item);
 							}}
-							className="item-link">{item}
+							className={'item-link' + (props.currentRocket === item ? ' active' : '')}>{item}
 						</Link>
 					</li>
 				))}

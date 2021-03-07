@@ -55,7 +55,10 @@ class App extends React.Component {
 	render() {
 		return (
 			<BrowserRouter>
-				<Header rockets={this.state.rockets} changeRocket={this.changeRocket} />
+				<Header
+					rockets={this.state.rockets}
+					currentRocket={this.state.rocket}
+					changeRocket={this.changeRocket} />
 
 				<Switch>
 					<Route exact
