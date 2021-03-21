@@ -23,12 +23,17 @@ class App extends React.Component {
 		rocket: 'Falcon 1',
 		rocketFeatures: null,
 		rockets: [],
-		company: null
+		company: null,
+		error: null
 	};
 
 	componentDidMount() {
 		this.updateRocket();
 		this.updateCompany();
+	}
+
+	onError = error => {
+		this.setState({ error: error.message });
 	}
 
 	updateRocket() {
@@ -38,7 +43,8 @@ class App extends React.Component {
 				return data
 			})
 			.then(data => data.find(item => item.name === this.state.rocket))
-			.then(rocketFeatures => this.setState({ rocketFeatures }));
+			.then(rocketFeatures => this.setState({ rocketFeatures }))
+			.catch(this.onError);
 	}
 
 	changeRocket = rocket => {
@@ -50,6 +56,7 @@ class App extends React.Component {
 	updateCompany = () => {
 		this.fetchData.getCompany()
 			.then(company => this.setState({ company }))
+			.catch(this.onError);
 	}
 
 	render() {
@@ -59,6 +66,8 @@ class App extends React.Component {
 					rockets={this.state.rockets}
 					currentRocket={this.state.rocket}
 					changeRocket={this.changeRocket} />
+
+				{this.state.error && <div className="error-banner">{this.state.error}</div>}
 
 				<Switch>
 					<Route exact

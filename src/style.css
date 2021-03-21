@@ -68,6 +68,17 @@ h1, h2, h3, p {
 	line-height: 14px;
 }
 
+.error-banner {
+	max-width: 800px;
+	margin: 0 auto 20px;
+	padding: 15px 20px;
+	background: #5a1a1a;
+	border: 1px solid #ff5555;
+	border-radius: 6px;
+	text-align: center;
+	color: #fff;
+}
+
 /* header */
 /* main */
 /* features */
