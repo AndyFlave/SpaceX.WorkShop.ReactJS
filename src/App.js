@@ -10,6 +10,7 @@ import Details from './components/Details/Details';
 import Loader from './components/Loader/Loader';
 import NotFound from './components/NotFound/NotFound';
 import Upcoming from './components/Upcoming/Upcoming';
+import ScrollTop from './components/ScrollTop/ScrollTop';
 
 import FetchData from './service/FetchData';
 
@@ -88,6 +89,8 @@ class App extends React.Component {
 				</Switch>
 
 				{this.state.company && <Footer {...this.state.company} />}
+
+				<ScrollTop />
 			</BrowserRouter>
 		);
 	}
