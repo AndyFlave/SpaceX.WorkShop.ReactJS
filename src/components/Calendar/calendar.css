@@ -19,6 +19,13 @@
 	color: #808080;
 }
 
+.calendar-empty {
+	text-align: center;
+	color: #808080;
+	font-size: 18px;
+	padding: 40px 0;
+}
+
 .calendar-list {
 	display: flex;
 	justify-content: space-around;

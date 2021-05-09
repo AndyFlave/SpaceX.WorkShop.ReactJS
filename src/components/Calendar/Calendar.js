@@ -30,6 +30,9 @@ const Calendar = () => {
 							onChange={e => setSearch(e.target.value)}
 						/>
 					)}
+					{!!data.length && !filtered.length && (
+						<p className="calendar-empty">Nothing found</p>
+					)}
 					<ul className="calendar-list">
 
 						{
