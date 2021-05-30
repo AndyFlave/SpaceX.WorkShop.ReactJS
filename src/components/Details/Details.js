@@ -33,7 +33,11 @@ const Details = (props) => {
 							<ul className="details-info">
 								<li><b>Date:</b> {new Date(launch.date_utc).toLocaleDateString()}</li>
 								<li><b>Flight number:</b> {launch.flight_number}</li>
-								<li><b>Status:</b> {launch.success ? 'Success' : 'Failure'}</li>
+								<li><b>Status:</b>{' '}
+									<span className={launch.success ? 'status-success' : 'status-failure'}>
+										{launch.success ? 'Success' : 'Failure'}
+									</span>
+								</li>
 							</ul>
 							<p className="details-description">{launch.details}</p>
 						</div>
