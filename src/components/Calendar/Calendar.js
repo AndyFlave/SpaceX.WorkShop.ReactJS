@@ -17,7 +17,7 @@ const Calendar = () => {
 
 	return (
 		<>
-			<Main name="Calendar Spacex" />
+			<Main name={data.length ? `Calendar Spacex (${data.length})` : 'Calendar Spacex'} />
 			<section className="calendar">
 				<div className="container">
 					{!data.length && <Loader />}
