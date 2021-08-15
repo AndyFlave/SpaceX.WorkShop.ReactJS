@@ -48,6 +48,12 @@
 	overflow: hidden;
 	padding: 30px;
 	text-align: left;
+	transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.launches:hover {
+	transform: translateY(-4px);
+	box-shadow: 0 6px 20px rgba(255, 255, 255, 0.15);
 }
 
 .launches-date {
