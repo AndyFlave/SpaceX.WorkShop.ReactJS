@@ -11,6 +11,7 @@ import Loader from './components/Loader/Loader';
 import NotFound from './components/NotFound/NotFound';
 import Upcoming from './components/Upcoming/Upcoming';
 import ScrollTop from './components/ScrollTop/ScrollTop';
+import ScrollToTopOnNav from './components/ScrollTop/ScrollToTopOnNav';
 
 import FetchData from './service/FetchData';
 
@@ -63,6 +64,7 @@ class App extends React.Component {
 	render() {
 		return (
 			<BrowserRouter>
+				<ScrollToTopOnNav />
 				<Header
 					rockets={this.state.rockets}
 					currentRocket={this.state.rocket}
