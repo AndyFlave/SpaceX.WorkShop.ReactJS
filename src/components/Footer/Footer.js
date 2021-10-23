@@ -25,6 +25,7 @@ const Footer = ({ links: { elon_twitter: elonMask, flickr, twitter, website }, s
 			{summary}
 			<a className="footer-link" href="mailto:rideshare@spacex.com">rideshare@spacex.com</a>
 		</p>
+		<p className="footer-copy">© {new Date().getFullYear()} SpaceX</p>
 	</footer>
 )
 
