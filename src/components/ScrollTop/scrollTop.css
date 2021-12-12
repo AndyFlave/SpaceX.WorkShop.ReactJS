@@ -17,3 +17,13 @@
 .scroll-top:hover {
 	background: #333;
 }
+
+@media (max-width: 576px) {
+	.scroll-top {
+		right: 15px;
+		bottom: 15px;
+		width: 42px;
+		height: 42px;
+		font-size: 20px;
+	}
+}
